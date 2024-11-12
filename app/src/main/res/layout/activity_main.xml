@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DAFTAR NILAI"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Matakuliah : Mobile Programming"
+        android:paddingTop="8dp"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+    <ImageView
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:src="@drawable/ubl"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:layout_margin="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UNIVERSITAS BUDI LUHUR-2024/2025"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Semester dan RadioButton dalam satu baris -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semester :"
+            android:layout_gravity="center_vertical"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupSemester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="8dp">
+
+            <RadioButton
+                android:id="@+id/radio_gasal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gasal"/>
+
+            <RadioButton
+                android:id="@+id/radio_genap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Genap"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Input Data -->
+    <EditText
+        android:id="@+id/input_nim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input NIM"
+        android:inputType="number"
+        android:layout_marginTop="8dp"/>
+
+    <EditText
+        android:id="@+id/input_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input Nama Lengkap"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NILAI :"
+        android:textStyle="bold"
+        android:paddingTop="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- Kolom kiri (UTS dan UAS) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/input_uts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nilai UTS"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/input_uas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nilai UAS"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/input_presensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nilai Presensi"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/input_tugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nilai Tugas"
+                android:inputType="number"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_hitung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hitung Nilai Akhir"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
